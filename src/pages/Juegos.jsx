@@ -10,7 +10,7 @@ export const Juegos = () => {
         <>
             <TopNav />
             <Container>
-                <ImageList gap={10} cols={2}>
+                <ImageList gap={10} cols={3}>
                     {games.map((game) => (
                         <Link to={game.reference} key={game.poster}>
                             <ImageListItem>
