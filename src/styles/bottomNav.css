@@ -1,0 +1,7 @@
+.MuiBottomNavigation-root{
+    background-color: #232323 !important;
+}
+
+.MuiButtonBase-root.MuiBottomNavigationAction-root.Mui-selected{
+    color: #01EB78;
+}
