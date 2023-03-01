@@ -14,7 +14,7 @@ export const Juegos = () => {
                     {games.map((game) => (
                         <Link to={game.reference} key={game.poster}>
                             <ImageListItem>
-                                <img src={game.poster} alt={game.title} />
+                                <img className="cover" src={game.poster} alt={game.title} />
                             </ImageListItem>
                         </Link>
                     ))}

@@ -1,4 +1,10 @@
+/* General Styles */
 html{
   background-color: #121212;
   color: #fff
+}
+
+/* Img styles */
+.cover{
+  border-radius: 5px;
 }
