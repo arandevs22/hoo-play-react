@@ -8,3 +8,7 @@ html{
 .cover{
   border-radius: 5px;
 }
+
+.gameLogo{
+  width: 180px;
+}

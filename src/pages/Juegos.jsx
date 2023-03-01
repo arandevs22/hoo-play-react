@@ -12,7 +12,7 @@ export const Juegos = () => {
             <Container>
                 <ImageList gap={10} cols={3}>
                     {games.map((game) => (
-                        <Link to={game.reference} key={game.poster}>
+                        <Link to={`/juegos/id/${game.id}`} key={game.poster}>
                             <ImageListItem>
                                 <img className="cover" src={game.poster} alt={game.title} />
                             </ImageListItem>
