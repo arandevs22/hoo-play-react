@@ -1,4 +1,4 @@
-import { Box, Button, Typography, Container, IconButton } from "@mui/material";
+import { Button, Typography, Container, IconButton } from "@mui/material";
 import { useLoaderData } from "react-router-dom";
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -17,24 +17,32 @@ export const GameDetails = () => {
                 <div className="uk-overlay uk-position-center">
                     <img className="gameLogo" src={game.logo} alt={game.title} />
                 </div>
-                <div className="uk-position-top-left">
+                <div className="uk-position-top-left uk-margin-small-left uk-margin-small-top">
                     <IconButton
-
                     >
-                        <ArrowBackIosIcon />
+                        <ArrowBackIosIcon  />
                     </IconButton>
                 </div>
                 <div className="uk-position-bottom-left uk-margin-left">
-                    <Typography className="subtitle" variant="body1" color={"#01EB78"}>
-                        {game.genre} · {game.year}
+                    <Typography className="subtitle" variant="body2" color={"#01EB78"}>
+                        {game.genre} · {game.year} · {game.console}
                     </Typography>
-                    <Typography variant="h6" color={'#fff'}>
+                    <Typography variant="h5" color={'#fff'}>
                         {game.title}
                     </Typography>
                 </div>
             </div>
-            <Container >
-                <Button fullWidth={true} href={game.reference} variant="contained" startIcon={<VideogameAssetIcon />}>Jugar Ahora</Button>
+            <Container className="uk-margin-bottom" >
+                <Button fullWidth={true} href={game.reference} variant="contained" startIcon={<VideogameAssetIcon />}>
+                    Jugar Ahora
+                </Button>
+                <hr color={"#232323"} />
+                <Typography className="uk-margin-small-bottom" variant="body1">
+                    Sinopsis
+                </Typography>
+                <Typography variant="body2" color={"gray"}>
+                    {game.sinopsis}
+                </Typography>
             </Container>
         </>
     )

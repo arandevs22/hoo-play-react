@@ -23,3 +23,11 @@ html{
   font-style: italic;
   text-transform: uppercase;
 }
+
+.MuiButtonBase-root.MuiIconButton-root{
+  color: #ffffff;
+}
+
+hr {
+  border-top: 1px solid #232323;
+}
