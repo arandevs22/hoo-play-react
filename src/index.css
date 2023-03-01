@@ -12,3 +12,14 @@ html{
 .gameLogo{
   width: 180px;
 }
+
+/* Details */
+.MuiButtonBase-root.MuiButton-root{
+  color: #121212;
+  background-color: #01EB78;
+}
+
+.MuiTypography-root.subtitle{
+  font-style: italic;
+  text-transform: uppercase;
+}
