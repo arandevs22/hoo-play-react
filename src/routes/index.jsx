@@ -1,7 +1,8 @@
+import { LocalLaundryServiceOutlined } from "@mui/icons-material";
 import { createBrowserRouter } from "react-router-dom";
 import LayOutPublic from "../layout/LayOutPublic";
 import { Home } from "../pages/Home";
-import { Juegos } from "../pages/Juegos";
+import { Juegos, loaderGames } from "../pages/Juegos";
 import { LiveTv } from "../pages/LiveTv";
 import { Peliculas } from "../pages/Peliculas";
 import { Series } from "../pages/Series";
@@ -29,7 +30,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/juegos',
-                element: <Juegos />
+                element: <Juegos />,
+                loader: loaderGames
             }
         ]
     }

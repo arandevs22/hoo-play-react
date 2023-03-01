@@ -1,13 +1,33 @@
-import { Typography } from "@mui/material"
-import { TopNav } from "../components/TopNav"
+import { Container, ImageList, ImageListItem, } from "@mui/material";
+import { Link, useLoaderData } from "react-router-dom";
+import { TopNav } from "../components/TopNav";
 
 export const Juegos = () => {
+
+    const { games } = useLoaderData();
+
     return (
         <>
             <TopNav />
-            <Typography variant="h5" color='#fff'>
-                Juegos
-            </Typography>
+            <Container>
+                <ImageList gap={10} cols={2}>
+                    {games.map((game) => (
+                        <Link to={game.reference} key={game.poster}>
+                            <ImageListItem>
+                                <img src={game.poster} alt={game.title} />
+                            </ImageListItem>
+                        </Link>
+                    ))}
+                </ImageList>
+            </Container>
         </>
     )
+}
+
+export const loaderGames = async () => {
+    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance/`);
+
+    const games = await res.json();
+
+    return { games }
 }
