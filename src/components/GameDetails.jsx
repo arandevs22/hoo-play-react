@@ -18,7 +18,7 @@ export const GameDetails = () => {
                 <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(${game.background})` }}>
                 </div>
                 <div className="uk-overlay-primary uk-position-cover"></div>
-                <div className="uk-overlay uk-position-center">
+                <div className="uk-position-top-right uk-margin-small-top uk-margin-small-right">
                     <img className="gameLogo" src={game.logo} alt={game.title} />
                 </div>
                 <div className="uk-position-top-left uk-margin-small-left uk-margin-small-top">
