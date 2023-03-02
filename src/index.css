@@ -19,6 +19,16 @@ html{
   background-color: #01EB78;
 }
 
+.MuiButtonBase-root.MuiButton-root.detailsBtn{
+  color: #01EB78;
+  background: none;
+}
+
+.MuiButtonBase-root.MuiButton-root.detailsBtn{
+  font-size: 0.5rem;
+  border: 1px solid #01EB78;
+}
+
 .MuiTypography-root.subtitle{
   font-style: italic;
   text-transform: uppercase;
