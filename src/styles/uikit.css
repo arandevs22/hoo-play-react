@@ -3090,7 +3090,7 @@ select.uk-form-width-xsmall {
  */
 .uk-overlay-primary {
   background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(18,18,18,1) 90%);
+background: linear-gradient(180deg, rgba(18,18,18,0.6) 0%, rgba(18,18,18,1) 80%);
 }
 /* ========================================================================
    Component: Article
