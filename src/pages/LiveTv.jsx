@@ -1,13 +1,32 @@
-import { Typography } from "@mui/material"
-import { TopNav } from "../components/TopNav"
-
+import { Container, ImageList, ImageListItem, Link } from "@mui/material";
+import { useLoaderData } from "react-router-dom";
+import { TopNav } from "../components/TopNav";
 export const LiveTv = () => {
+
+    const { channels } = useLoaderData();
+
     return (
         <>
             <TopNav />
-            <Typography variant="h5" color='#fff'>
-                Live Tv
-            </Typography>
+            <Container>
+                <ImageList gap={10} cols={3}>
+                    {channels.map((channel) => (
+                        <Link href={channel.reference} key={channel.logo}>
+                            <ImageListItem>
+                                <img className="cover" src={channel.logo} alt={channel.title} />
+                            </ImageListItem>
+                        </Link>
+                    ))}
+                </ImageList>
+            </Container>
         </>
     )
+}
+
+export const loaderChannels = async () => {
+    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/channels/`);
+
+    const channels = await res.json();
+
+    return { channels }
 }
