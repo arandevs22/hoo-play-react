@@ -30,14 +30,16 @@ export const GameDetails = () => {
                 </div>
                 <div className="uk-position-bottom-left uk-margin-left">
                     <Typography mb={2} >
-                        <Link className="uk-link-reset" to={`/juegos/${game.genre}`}>
+                        <Link className="uk-link-reset" to={`/juegos/genre/${game.genre}`}>
                             <Button className="detailsBtn uk-margin-small-right" variant="outlined">
                                 {game.genre}
                             </Button>
                         </Link>
-                        <Button className="detailsBtn uk-margin-small-right" variant="outlined">
-                            {game.year}
-                        </Button>
+                        <Link className="uk-link-reset" to={`/juegos/year/${game.year}`}>
+                            <Button className="detailsBtn uk-margin-small-right" variant="outlined">
+                                {game.year}
+                            </Button>
+                        </Link>
                     </Typography>
                     <Typography variant="h6" color={'#fff'}>
                         {game.title}

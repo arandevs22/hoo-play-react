@@ -6,7 +6,8 @@ import { Juegos, loaderGames } from "../pages/Juegos";
 import {LiveTv, loaderChannels} from "../pages/LiveTv";
 import { Peliculas } from "../pages/Peliculas";
 import { Series } from "../pages/Series";
-import {JuegosGenre, loaderGameGenre} from "../pages/categorias-juegos/Generos.jsx";
+import {JuegosGenre, loaderGameGenre} from "../pages/categorias-juegos/JuegosGeneros.jsx";
+import {JuegosYears, loaderGameYear} from "../pages/categorias-juegos/JuegosYears.jsx";
 
 
 export const router = createBrowserRouter([
@@ -42,9 +43,14 @@ export const router = createBrowserRouter([
                 loader: loaderGameDetails
             },
             {
-                path: '/juegos/:genre',
+                path: '/juegos/genre/:genre',
                 element: <JuegosGenre />,
                 loader: loaderGameGenre
+            },
+            {
+                path: '/juegos/year/:year',
+                element: <JuegosYears />,
+                loader: loaderGameYear
             },
 
         ]
