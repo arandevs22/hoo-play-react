@@ -6,6 +6,8 @@ import { Juegos, loaderGames } from "../pages/Juegos";
 import {LiveTv, loaderChannels} from "../pages/LiveTv";
 import { Peliculas } from "../pages/Peliculas";
 import { Series } from "../pages/Series";
+import {JuegosGenre, loaderGameGenre} from "../pages/categorias-juegos/Generos.jsx";
+
 
 export const router = createBrowserRouter([
     {
@@ -38,6 +40,11 @@ export const router = createBrowserRouter([
                 path: '/juegos/id/:id',
                 element: <GameDetails />,
                 loader: loaderGameDetails
+            },
+            {
+                path: '/juegos/:genre',
+                element: <JuegosGenre />,
+                loader: loaderGameGenre
             },
 
         ]

@@ -1,5 +1,5 @@
 import { Button, Typography, Container, IconButton } from "@mui/material";
-import { useLoaderData } from "react-router-dom";
+import {Link, useLoaderData} from "react-router-dom";
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
@@ -30,14 +30,13 @@ export const GameDetails = () => {
                 </div>
                 <div className="uk-position-bottom-left uk-margin-left">
                     <Typography mb={2} >
-                        <Button className="detailsBtn uk-margin-small-right" variant="outlined">
-                            {game.genre}
-                        </Button>
+                        <Link className="uk-link-reset" to={`/juegos/${game.genre}`}>
+                            <Button className="detailsBtn uk-margin-small-right" variant="outlined">
+                                {game.genre}
+                            </Button>
+                        </Link>
                         <Button className="detailsBtn uk-margin-small-right" variant="outlined">
                             {game.year}
-                        </Button>
-                        <Button className="detailsBtn" variant="outlined">
-                            {game.console}
                         </Button>
                     </Typography>
                     <Typography variant="h6" color={'#fff'}>
