@@ -15,7 +15,7 @@ export const ChannelsGenre = () => {
                 </Typography>
                 <ImageList gap={10} cols={3}>
                     {channelsGenre.map((channel) => (
-                        <Link to={`/channels/id/${channel.id}`} key={channel.logo}>
+                        <Link to={`/canales/id/${channel.id}`} key={channel.logo}>
                             <ImageListItem>
                                 <img className="cover" src={channel.logo} alt={channel.title} />
                             </ImageListItem>
