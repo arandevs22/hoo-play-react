@@ -19,7 +19,7 @@ export const ChannelDetails = () => {
                 </div>
                 <div className="uk-overlay-primary uk-position-cover"></div>
                 <div className="uk-position-top-right uk-margin-top uk-margin-right">
-                    <img className="channelLogo cover" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fcanales%2Flogos%2F${channel.img}.jpg?alt=media&token=8e656e30-8f35-4b8d-aee7-adace3393b9f`} alt={channel.title} />
+                    <img className="channelLogo uk-border-circle" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fcanales%2Flogos%2F${channel.img}.jpg?alt=media&token=8e656e30-8f35-4b8d-aee7-adace3393b9f`} alt={channel.title} />
                 </div>
                 <div className="uk-position-top-left uk-margin-left uk-margin-top">
                     <IconButton

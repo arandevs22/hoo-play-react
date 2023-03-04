@@ -15,7 +15,7 @@ export const ChannelsGenre = () => {
                 </Typography>
                 <ImageList gap={10} cols={3}>
                     {channelsGenre.map((channel) => (
-                        <Link to={`/canales/id/${channel.id}`} key={channel.logo}>
+                        <Link to={`/canales/id/${channel.id}`} key={channel.img}>
                             <ImageListItem>
                                 <img className="cover" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fcanales%2Flogos%2F${channel.img}.jpg?alt=media&token=c1c23d46-cac3-4d48-8390-10a5f9ddfa65`} alt={channel.title} />
                             </ImageListItem>
