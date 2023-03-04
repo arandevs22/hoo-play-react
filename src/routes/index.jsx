@@ -9,6 +9,7 @@ import { JuegosGenre, loaderGameGenre } from "../pages/games-category/GamesGenre
 import { GameYears, loaderGameYear } from "../pages/games-category/GamesYear.jsx";
 import { ChannelDetails, loaderChannelDetails } from "../components/ChannelDetails.jsx";
 import { Channels, loaderChannels } from "../pages/Channels";
+import { ChannelsGenre, loaderChannelGenre } from "../pages/channels-category/ChannelsGenre";
 
 
 export const router = createBrowserRouter([
@@ -29,6 +30,11 @@ export const router = createBrowserRouter([
                 path: '/canales/id/:id',
                 element: <ChannelDetails />,
                 loader: loaderChannelDetails
+            },
+            {
+                path: '/canales/genre/:genre',
+                element: <ChannelsGenre />,
+                loader: loaderChannelGenre
             },
             {
                 path: '/peliculas',

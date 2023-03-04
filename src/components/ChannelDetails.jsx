@@ -30,7 +30,7 @@ export const ChannelDetails = () => {
                 </div>
                 <div className="uk-position-bottom-left uk-margin-left">
                     <Typography mb={2} >
-                        <Link className="uk-link-reset" to={`/juegos/genre/${channel.genre}`}>
+                        <Link className="uk-link-reset" to={`/canales/genre/${channel.genre}`}>
                             <Button className="detailsBtn uk-margin-small-right" variant="outlined">
                                 {channel.genre}
                             </Button>
