@@ -13,6 +13,10 @@ html{
   width: 100px;
 }
 
+.channelLogo{
+  width: 50px;
+}
+
 /* Details */
 .MuiButtonBase-root.MuiButton-root{
   color: #ffffff;

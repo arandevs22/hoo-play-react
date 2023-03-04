@@ -35,10 +35,10 @@ export const BottomNav = () => {
                     <BottomNavigationAction
                         label="Live TV"
                         icon={<LiveTvIcon />}
-                        onClick={() => navigate('/live-tv')}
+                        onClick={() => navigate('/canales')}
                     />
                     <BottomNavigationAction
-                        label="Peliculas"
+                        label="Movies"
                         icon={<MovieIcon />}
                         onClick={() => navigate('/peliculas')}
                     />
@@ -48,7 +48,7 @@ export const BottomNav = () => {
                         onClick={() => navigate('/series')}
                     />
                     <BottomNavigationAction
-                        label="Juegos"
+                        label="Games"
                         icon={<SportsEsportsIcon />}
                         onClick={() => navigate('/juegos')}
                     />

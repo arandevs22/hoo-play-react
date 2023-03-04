@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material"
 import { TopNav } from "../components/TopNav"
 
-export const Peliculas = () => {
+export const Movies = () => {
     return (
         <>
             <TopNav />

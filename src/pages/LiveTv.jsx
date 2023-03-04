@@ -11,7 +11,7 @@ export const LiveTv = () => {
             <Container>
                 <ImageList gap={10} cols={3}>
                     {channels.map((channel) => (
-                        <Link href={channel.reference} key={channel.logo}>
+                        <Link href={`/canales/id/${channel.id}`} key={channel.logo}>
                             <ImageListItem>
                                 <img className="cover" src={channel.logo} alt={channel.title} />
                             </ImageListItem>

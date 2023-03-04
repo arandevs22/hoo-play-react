@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import { GameDetails, loaderGameDetails } from "../components/GameDetails";
 import LayOutPublic from "../layout/LayOutPublic";
 import { Home } from "../pages/Home";
-import { Juegos, loaderGames } from "../pages/Juegos";
+import { Games, loaderGames } from "../pages/Games.jsx";
 import {LiveTv, loaderChannels} from "../pages/LiveTv";
-import { Peliculas } from "../pages/Peliculas";
+import { Movies } from "../pages/Movies.jsx";
 import { Series } from "../pages/Series";
-import {JuegosGenre, loaderGameGenre} from "../pages/categorias-juegos/JuegosGeneros.jsx";
-import {JuegosYears, loaderGameYear} from "../pages/categorias-juegos/JuegosYears.jsx";
+import {JuegosGenre, loaderGameGenre} from "../pages/games-category/GamesGenre.jsx";
+import {GameYears, loaderGameYear} from "../pages/games-category/GamesYear.jsx";
+import {ChannelDetails, loaderChannelDetails} from "../components/ChannelDetails.jsx";
 
 
 export const router = createBrowserRouter([
@@ -20,13 +21,18 @@ export const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: '/live-tv',
+                path: '/canales',
                 element: <LiveTv />,
                 loader: loaderChannels
             },
             {
+              path: '/canales/id/:id',
+              element: <ChannelDetails />,
+              loader: loaderChannelDetails
+            },
+            {
                 path: '/peliculas',
-                element: <Peliculas />
+                element: <Movies />
             },
             {
                 path: '/series',
@@ -34,7 +40,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/juegos/',
-                element: <Juegos />,
+                element: <Games />,
                 loader: loaderGames,
             },
             {
@@ -49,7 +55,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/juegos/year/:year',
-                element: <JuegosYears />,
+                element: <GameYears />,
                 loader: loaderGameYear
             },
 

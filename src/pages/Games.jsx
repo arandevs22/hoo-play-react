@@ -2,7 +2,7 @@ import { Container, ImageList, ImageListItem, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
 
-export const Juegos = () => {
+export const Games = () => {
 
     const { games } = useLoaderData();
 
