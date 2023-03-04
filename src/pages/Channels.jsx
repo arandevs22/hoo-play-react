@@ -1,7 +1,10 @@
-import { Container, ImageList, ImageListItem, Link } from "@mui/material";
+import { Container, ImageList, ImageListItem } from "@mui/material";
 import { useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
-export const LiveTv = () => {
+import { Link } from "react-router-dom";
+
+
+export const Channels = () => {
 
     const { channels } = useLoaderData();
 
@@ -11,7 +14,7 @@ export const LiveTv = () => {
             <Container>
                 <ImageList gap={10} cols={3}>
                     {channels.map((channel) => (
-                        <Link href={`/canales/id/${channel.id}`} key={channel.logo}>
+                        <Link to={`/canales/id/${channel.id}`} key={channel.logo}>
                             <ImageListItem>
                                 <img className="cover" src={channel.logo} alt={channel.title} />
                             </ImageListItem>

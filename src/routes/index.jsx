@@ -3,12 +3,12 @@ import { GameDetails, loaderGameDetails } from "../components/GameDetails";
 import LayOutPublic from "../layout/LayOutPublic";
 import { Home } from "../pages/Home";
 import { Games, loaderGames } from "../pages/Games.jsx";
-import {LiveTv, loaderChannels} from "../pages/LiveTv";
 import { Movies } from "../pages/Movies.jsx";
 import { Series } from "../pages/Series";
-import {JuegosGenre, loaderGameGenre} from "../pages/games-category/GamesGenre.jsx";
-import {GameYears, loaderGameYear} from "../pages/games-category/GamesYear.jsx";
-import {ChannelDetails, loaderChannelDetails} from "../components/ChannelDetails.jsx";
+import { JuegosGenre, loaderGameGenre } from "../pages/games-category/GamesGenre.jsx";
+import { GameYears, loaderGameYear } from "../pages/games-category/GamesYear.jsx";
+import { ChannelDetails, loaderChannelDetails } from "../components/ChannelDetails.jsx";
+import { Channels, loaderChannels } from "../pages/Channels";
 
 
 export const router = createBrowserRouter([
@@ -22,13 +22,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/canales',
-                element: <LiveTv />,
+                element: <Channels />,
                 loader: loaderChannels
             },
             {
-              path: '/canales/id/:id',
-              element: <ChannelDetails />,
-              loader: loaderChannelDetails
+                path: '/canales/id/:id',
+                element: <ChannelDetails />,
+                loader: loaderChannelDetails
             },
             {
                 path: '/peliculas',
