@@ -1,5 +1,5 @@
 import { Button, Typography, Container, IconButton } from "@mui/material";
-import {Link, useLoaderData} from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
@@ -15,17 +15,17 @@ export const GameDetails = () => {
     return (
         <>
             <div className="uk-position-relative uk-margin-bottom">
-                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(${game.background})` }}>
+                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fjuegos%2Fbackground%2F${game.id}.jpg?alt=media&token=c1c23d46-cac3-4d48-8390-10a5f9ddfa65)` }}>
                 </div>
                 <div className="uk-overlay-primary uk-position-cover"></div>
                 <div className="uk-position-top-right uk-margin-top uk-margin-right">
-                    <img className="gameLogo" src={game.logo} alt={game.title} />
+                    <img className="gameLogo" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fjuegos%2Flogo%2F${game.logo}?alt=media&token=c1c23d46-cac3-4d48-8390-10a5f9ddfa65`} alt={game.title} />
                 </div>
                 <div className="uk-position-top-left uk-margin-left uk-margin-top">
                     <IconButton
                         onClick={backButton}
                     >
-                        <ArrowBackIosIcon  />
+                        <ArrowBackIosIcon />
                     </IconButton>
                 </div>
                 <div className="uk-position-bottom-left uk-margin-left">
