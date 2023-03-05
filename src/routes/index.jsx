@@ -3,7 +3,7 @@ import { GameDetails, loaderGameDetails } from "../components/GameDetails";
 import LayOutPublic from "../layout/LayOutPublic";
 import { Home } from "../pages/Home";
 import { Games, loaderGames } from "../pages/Games.jsx";
-import { Movies } from "../pages/Movies.jsx";
+import { loaderMovies, Movies } from "../pages/Movies.jsx";
 import { Series } from "../pages/Series";
 import { JuegosGenre, loaderGameGenre } from "../pages/games-category/GamesGenre.jsx";
 import { GameYears, loaderGameYear } from "../pages/games-category/GamesYear.jsx";
@@ -40,7 +40,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/peliculas',
-                element: <Movies />
+                element: <Movies />,
+                loader: loaderMovies
             },
             {
                 path: '/peliculas/id/:id',
