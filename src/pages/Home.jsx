@@ -10,7 +10,7 @@ export const Home = () => {
             <TopNav />
             <SliderSports />
             <SliderMovieChannels />
-            <Link className="uk-margin-top" to={"peliculas/id/631842"}>
+            <Link className="uk-margin-top" to={"peliculas/id/937278"}>
                 Pelicula de prueba
             </Link>
         </>
