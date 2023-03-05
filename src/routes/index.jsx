@@ -10,7 +10,7 @@ import { GameYears, loaderGameYear } from "../pages/games-category/GamesYear.jsx
 import { ChannelDetails, loaderChannelDetails } from "../components/ChannelDetails.jsx";
 import { Channels, loaderChannels } from "../pages/Channels";
 import { ChannelsGenre, loaderChannelGenre } from "../pages/channels-category/ChannelsGenre";
-import { loaderSliderSports } from "../components/SliderSports";
+
 
 
 export const router = createBrowserRouter([
@@ -21,7 +21,6 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                loader: loaderSliderSports
             },
             {
                 path: '/canales',
