@@ -59,3 +59,9 @@ hr {
   text-transform: capitalize;
   color: #ffffff;
 }
+
+/* Sliders */
+
+.uk-grid-small.slide-cover {
+  margin-right: -50px;
+}
