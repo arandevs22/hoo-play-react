@@ -6,6 +6,10 @@
     color: #01EB78;
 }
 
+.MuiBottomNavigationAction-label{
+    color: #FFFFFF !important;
+}
+
 .MuiButtonBase-root.MuiBottomNavigationAction-root{
     color: #fff;
 }
