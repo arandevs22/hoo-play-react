@@ -1,7 +1,10 @@
-import { Button, Typography, Container, IconButton, Stack } from "@mui/material";
+import { Button, Typography, Container, IconButton, Stack, Divider, Box } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import StarIcon from '@mui/icons-material/Star';
+import EventIcon from '@mui/icons-material/Event';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 
 
 export const MovieDetails = () => {
@@ -14,7 +17,7 @@ export const MovieDetails = () => {
 
     return (
         <>
-            <div className="uk-position-relative uk-margin-bottom">
+            <div className="uk-position-relative">
                 <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
                 </div>
                 <div className="uk-overlay-primary uk-position-cover"></div>
@@ -25,25 +28,27 @@ export const MovieDetails = () => {
                         <ArrowBackIosIcon />
                     </IconButton>
                 </div>
-                <div className="uk-position-bottom-left uk-margin-left">
-                    <Stack mb={2} direction="row" spacing={1}>
-                        {movie.genres.map((generos) => (
-                            <Link className="uk-link-reset" to={`/juegos/genre/${generos.name}`} key={generos.name}>
-                                <Button className="detailsBtn uk-margin-small-right" variant="outlined">
-                                    {generos.name}
-                                </Button>
-                            </Link>
-                        ))}
-                    </Stack>
-                    <Typography variant="h6" color={'#fff'}>
+                <div className="uk-position-bottom uk-margin-left">
+                    <Typography mb={1} variant="h5" color={'#fff'}>
                         {movie.title}
                     </Typography>
                 </div>
             </div>
             <Container className="uk-margin-bottom" >
-                <Button fullWidth={true} href={`go:${movie.id}`} variant="contained" startIcon={<PlayCircleOutlineIcon />}>
-                    reproducir pelicula
-                </Button>
+                <Stack mb={2} direction="row" spacing={1} justifyContent="center">
+                    {movie.genres.map((generos) => (
+                        <Link className="uk-link-reset" to={`/juegos/genre/${generos.name}`} key={generos.name}>
+                            <Button className="detailsBtn uk-margin-small-right" variant="outlined">
+                                {generos.name}
+                            </Button>
+                        </Link>
+                    ))}
+                </Stack>
+                <Box mb={2}>
+                    <Button fullWidth={true} href={`go:${movie.id}`} variant="contained" startIcon={<PlayCircleOutlineIcon />}>
+                        reproducir pelicula
+                    </Button>
+                </Box>
                 <hr color={"#232323"} />
                 <Typography className="uk-margin-small-bottom" variant="body1">
                     Sinopsis

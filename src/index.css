@@ -54,6 +54,10 @@ hr {
   border-top: 1px solid #232323;
 }
 
+.MuiSvgIcon-root.details{
+  color: #01EB78;
+}
+
 /* Categories */
 .genreTitle{
   text-transform: capitalize;
@@ -64,4 +68,14 @@ hr {
 
 .uk-grid-small.slide-cover {
   margin-right: -50px;
+}
+
+/* Movie Page */
+.MuiImageListItemBar-root{
+  background: rgba(18, 18, 18, 0.5);
+  font-size: 0.9 !important;
+}
+
+.MuiImageListItemBar-title{
+  font-size: 0.9rem !important;
 }

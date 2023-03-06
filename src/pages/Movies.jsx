@@ -1,8 +1,8 @@
-import { Container, ImageList, ImageListItem } from "@mui/material";
+import { Container, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 import { useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
 import { Link } from "react-router-dom";
-
+import { Star } from "@mui/icons-material";
 
 export const Movies = () => {
 
@@ -12,11 +12,14 @@ export const Movies = () => {
         <>
             <TopNav />
             <Container>
-                <ImageList gap={10} cols={3}>
+                <ImageList gap={20} cols={3}>
                     {movies.items.map((movie) => (
                         <Link to={`/peliculas/id/${movie.id}`} key={movie.id}>
                             <ImageListItem>
-                                <img className="cover" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                                <img className="cover" src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title} />
+                                <ImageListItemBar
+                                    title={<div> <Star className="details" /> {movie.vote_average} </div>}
+                                />
                             </ImageListItem>
                         </Link>
                     ))}
