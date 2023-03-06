@@ -73,9 +73,9 @@ hr {
 /* Movie Page */
 .MuiImageListItemBar-root{
   background: rgba(18, 18, 18, 0.5);
-  font-size: 0.9 !important;
+  font-size: 0.6rem !important
 }
 
 .MuiImageListItemBar-title{
-  font-size: 0.9rem !important;
+  font-size: 0.6rem !important;
 }
