@@ -6,7 +6,7 @@ html{
 
 /* Img styles */
 .cover{
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .gameLogo{
@@ -55,7 +55,8 @@ hr {
 }
 
 .MuiSvgIcon-root.details{
-  color: #01EB78;
+  color: #121212;
+  font-size: 1.2rem !important;
 }
 
 /* Categories */
@@ -78,4 +79,16 @@ hr {
 
 .MuiImageListItemBar-title{
   font-size: 0.6rem !important;
+}
+
+/* Text */
+
+.title-movie{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.overage{
+  font-size: 1.0rem
 }
