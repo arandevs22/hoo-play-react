@@ -1,0 +1,40 @@
+.MuiButtonBase-root.MuiButton-root {
+    color: #ffffff;
+    background-color: #232323;
+    border-radius: 16px;
+}
+
+.MuiButtonBase-root.MuiButton-root:hover {
+    background-color: #232323;
+    color: #ffffff;
+}
+
+.MuiButtonBase-root.MuiButton-root.detailsBtn {
+    color: #01EB78;
+    background: none;
+}
+
+.MuiButtonBase-root.MuiButton-root.detailsBtn {
+    font-size: 0.5rem;
+    border: 1px solid #01EB78;
+    border-radius: 16px;
+}
+
+.MuiTypography-root.subtitle {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.MuiButtonBase-root.MuiIconButton-root {
+    color: #01EB78;
+    padding: 0;
+}
+
+hr {
+    border-top: 1px solid #232323;
+}
+
+.MuiSvgIcon-root.details {
+    color: #121212;
+    font-size: 1.2rem !important;
+}

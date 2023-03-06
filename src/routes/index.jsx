@@ -11,6 +11,7 @@ import { ChannelDetails, loaderChannelDetails } from "../components/ChannelDetai
 import { Channels, loaderChannels } from "../pages/Channels";
 import { ChannelsGenre, loaderChannelGenre } from "../pages/channels-category/ChannelsGenre";
 import { loaderMovieDetails, MovieDetails } from "../components/MovieDetails";
+import { loaderSerieDetails, SerieDetails } from "../components/SeriesDetails";
 
 
 
@@ -51,6 +52,11 @@ export const router = createBrowserRouter([
             {
                 path: '/series',
                 element: <Series />
+            },
+            {
+                path: 'series/id/:id',
+                element: <SerieDetails />,
+                loader: loaderSerieDetails
             },
             {
                 path: '/juegos/',

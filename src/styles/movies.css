@@ -1,0 +1,18 @@
+.MuiImageListItemBar-root {
+    background: rgba(18, 18, 18, 0.5);
+    font-size: 0.6rem !important
+}
+
+.MuiImageListItemBar-title {
+    font-size: 0.6rem !important;
+}
+
+.title-movie {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.overage {
+    font-size: 1.0rem
+}

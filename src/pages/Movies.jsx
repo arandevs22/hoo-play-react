@@ -2,10 +2,12 @@ import { Star } from "@mui/icons-material";
 import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
+import '../styles/movies.css';
+import '../styles/details.css'
 
 
 const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body3,
+    ...theme.typography.body2,
     textAlign: 'left',
     padding: '10px'
 }))
