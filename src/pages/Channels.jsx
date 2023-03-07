@@ -1,4 +1,4 @@
-import { Container, Typography, Paper, styled, Grid, ThemeProvider, createTheme, } from "@mui/material";
+import { Container, Typography, Paper, styled, Grid, ThemeProvider, createTheme, AppBar, Toolbar } from "@mui/material";
 import { useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
 import { Link } from "react-router-dom";
@@ -12,6 +12,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } });
 
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
+
 
 export const Channels = () => {
 
@@ -19,6 +21,14 @@ export const Channels = () => {
 
     return (
         <>
+            <AppBar position="fixed">
+                <Toolbar>
+                    <Typography variant="h6" color={"#fff"}>
+                        Televisión en Vivo
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <Offset />
             <Container>
                 <Grid mb={5} container spacing={1} >
                     <ThemeProvider theme={darkTheme}>
