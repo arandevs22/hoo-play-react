@@ -8,11 +8,6 @@ export const Home = () => {
     return (
         <>
             <TopNav />
-            <SliderSports />
-            <SliderMovieChannels />
-            <Link className="uk-margin-top" to={"peliculas/id/937278"}>
-                Pelicula de prueba
-            </Link>
         </>
     )
 }
