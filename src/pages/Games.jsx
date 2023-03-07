@@ -1,6 +1,5 @@
 import { Container, ImageList, ImageListItem, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
-import { TopNav } from "../components/TopNav";
 
 export const Games = () => {
 
@@ -8,7 +7,6 @@ export const Games = () => {
 
     return (
         <>
-            <TopNav />
             <Container>
                 <ImageList gap={10} cols={3}>
                     {games.map((game) => (

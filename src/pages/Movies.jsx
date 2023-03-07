@@ -18,7 +18,6 @@ export const Movies = () => {
 
     return (
         <>
-            <TopNav />
             <Container>
                 <Grid mb={5} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>

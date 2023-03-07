@@ -1,7 +1,6 @@
 import { Star } from "@mui/icons-material";
 import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
-import { TopNav } from "../components/TopNav";
 import '../styles/movies.css';
 import '../styles/details.css'
 
@@ -20,7 +19,6 @@ export const Series = () => {
 
     return (
         <>
-            <TopNav />
             <Container>
                 <Grid mb={5} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>
