@@ -12,6 +12,7 @@ import { Channels, loaderChannels } from "../pages/Channels";
 import { ChannelsGenre, loaderChannelGenre } from "../pages/channels-category/ChannelsGenre";
 import { loaderMovieDetails, MovieDetails } from "../components/MovieDetails";
 import { loaderSerieDetails, SerieDetails } from "../components/SeriesDetails";
+import { loaderMoviesTerror, MoviesTerror } from "../pages/movies-category/MoviesTerror";
 
 
 
@@ -48,6 +49,11 @@ export const router = createBrowserRouter([
                 path: '/peliculas/id/:id',
                 element: <MovieDetails />,
                 loader: loaderMovieDetails
+            },
+            {
+                path: '/peliculas/genre/27',
+                element: <MoviesTerror />,
+                loader: loaderMoviesTerror
             },
             {
                 path: '/series',

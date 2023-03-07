@@ -2,10 +2,6 @@ import { Button, Typography, Container, IconButton, Stack, Divider, Box } from "
 import { Link, useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import StarIcon from '@mui/icons-material/Star';
-import EventIcon from '@mui/icons-material/Event';
-import HowToRegIcon from '@mui/icons-material/HowToReg';
-
 
 export const MovieDetails = () => {
 
@@ -37,7 +33,7 @@ export const MovieDetails = () => {
             <Container className="uk-margin-bottom" >
                 <Stack mb={2} direction="row" spacing={1} >
                     {movie.genres.map((generos) => (
-                        <Link className="uk-link-reset" to={`/juegos/genre/${generos.name}`} key={generos.name}>
+                        <Link className="uk-link-reset" to={`/peliculas/genre/${generos.id}`} key={generos.id}>
                             <Button className="detailsBtn uk-margin-small-right" variant="outlined">
                                 {generos.name}
                             </Button>
