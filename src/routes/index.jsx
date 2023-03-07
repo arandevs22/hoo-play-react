@@ -4,7 +4,7 @@ import LayOutPublic from "../layout/LayOutPublic";
 import { Home } from "../pages/Home";
 import { Games, loaderGames } from "../pages/Games.jsx";
 import { loaderMovies, Movies } from "../pages/Movies.jsx";
-import { Series } from "../pages/Series";
+import { loaderSeries, Series } from "../pages/Series";
 import { JuegosGenre, loaderGameGenre } from "../pages/games-category/GamesGenre.jsx";
 import { GameYears, loaderGameYear } from "../pages/games-category/GamesYear.jsx";
 import { ChannelDetails, loaderChannelDetails } from "../components/ChannelDetails.jsx";
@@ -51,7 +51,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/series',
-                element: <Series />
+                element: <Series />,
+                loader: loaderSeries
             },
             {
                 path: 'series/id/:id',

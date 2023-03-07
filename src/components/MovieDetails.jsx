@@ -35,7 +35,7 @@ export const MovieDetails = () => {
                 </div>
             </div>
             <Container className="uk-margin-bottom" >
-                <Stack mb={2} direction="row" spacing={1} justifyContent="center">
+                <Stack mb={2} direction="row" spacing={1} >
                     {movie.genres.map((generos) => (
                         <Link className="uk-link-reset" to={`/juegos/genre/${generos.name}`} key={generos.name}>
                             <Button className="detailsBtn uk-margin-small-right" variant="outlined">
@@ -49,10 +49,6 @@ export const MovieDetails = () => {
                         reproducir pelicula
                     </Button>
                 </Box>
-                <hr color={"#232323"} />
-                <Typography className="uk-margin-small-bottom" variant="body1">
-                    Sinopsis
-                </Typography>
                 <Typography variant="body2" color={"gray"}>
                     {movie.overview}
                 </Typography>

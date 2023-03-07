@@ -31,7 +31,7 @@ export const SerieDetails = () => {
                 </div>
             </div>
             <Container className="uk-margin-bottom" >
-                <Stack mb={2} direction="row" spacing={1} justifyContent="center">
+                <Stack mb={2} direction="row" spacing={1} >
                     {serie.networks.map((provider) => (
                         <Link className="uk-link-reset" to={`/juegos/genre/${provider.name}`} key={provider.id}>
                             <Button className="detailsBtn uk-margin-small-right" variant="outlined">
@@ -40,11 +40,6 @@ export const SerieDetails = () => {
                         </Link>
                     ))}
                 </Stack>
-                <Box mb={2}>
-                    <Button fullWidth={true} href={`go:${serie.id}`} variant="contained" startIcon={<PlayCircleOutlineIcon />}>
-                        reproducir pelicula
-                    </Button>
-                </Box>
                 <hr color={"#232323"} />
                 <Typography className="uk-margin-small-bottom" variant="body1">
                     Sinopsis
