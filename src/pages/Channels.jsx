@@ -12,8 +12,6 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } });
 
-const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
-
 
 export const Channels = () => {
 
@@ -21,14 +19,7 @@ export const Channels = () => {
 
     return (
         <>
-            <AppBar position="fixed">
-                <Toolbar>
-                    <Typography variant="h6" color={"#fff"}>
-                        Televisión en Vivo
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Offset />
+            <TopNav />
             <Container>
                 <Grid mb={5} container spacing={1} >
                     <ThemeProvider theme={darkTheme}>

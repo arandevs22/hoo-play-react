@@ -3,6 +3,7 @@ import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography 
 import { Link, useLoaderData } from "react-router-dom";
 import '../styles/movies.css';
 import '../styles/details.css'
+import { TopNav } from "../components/TopNav";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -19,6 +20,7 @@ export const Series = () => {
 
     return (
         <>
+            <TopNav />
             <Container>
                 <Grid mb={5} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>

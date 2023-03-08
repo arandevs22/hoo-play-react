@@ -1,6 +1,7 @@
 import { Star } from "@mui/icons-material";
 import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography, AppBar, Toolbar, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
+import { TopNav } from "../components/TopNav";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -11,22 +12,13 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
-const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
-
 export const Movies = () => {
 
     const { movies } = useLoaderData();
 
     return (
         <>
-            <AppBar position="fixed">
-                <Toolbar>
-                    <Typography variant="h6" color={"#fff"}>
-                        Todas las Peliculas
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Offset />
+            <TopNav />
             <Container >
                 <Grid mb={5} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>
