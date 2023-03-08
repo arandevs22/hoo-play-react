@@ -1,7 +1,7 @@
 import { Button, Typography, Container, IconButton, Stack, Divider, Box } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export const MovieDetails = () => {
 
@@ -21,7 +21,7 @@ export const MovieDetails = () => {
                     <IconButton
                         onClick={backButton}
                     >
-                        <ArrowBackIosIcon />
+                        <ArrowBackIcon className="backBtn" />
                     </IconButton>
                 </div>
                 <div className="uk-position-bottom uk-margin-left">

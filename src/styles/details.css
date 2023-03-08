@@ -26,7 +26,7 @@
 }
 
 .MuiButtonBase-root.MuiIconButton-root {
-    color: #01EB78;
+    color: #fff;
     padding: 0;
 }
 
@@ -37,4 +37,9 @@ hr {
 .MuiSvgIcon-root.details {
     color: #121212;
     font-size: 1.2rem !important;
+}
+
+.MuiSvgIcon-root.backBtn {
+    color: #fff;
+    font-size: 1.9rem !important;
 }
