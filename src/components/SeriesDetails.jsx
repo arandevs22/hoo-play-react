@@ -64,14 +64,15 @@ export const SerieDetails = () => {
                                     </Typography>
                                 </CardContent>
                                 <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                                    <Button className='season'>
-                                        Ver Episodios
-                                    </Button>
+                                    <Link to={`/series/id/${serie.id}/season/${season.season_number}`} className='uk-link-reset'>
+                                        <Button className='season'>
+                                            Ver Temporada
+                                        </Button>
+                                    </Link>
                                 </Box>
                             </Box>
                         </Card>
                     </Box>
-
                 ))}
             </Container>
         </>
