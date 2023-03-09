@@ -72,7 +72,6 @@ export const SeriesSeasons = () => {
                         <a className="uk-position-top-left uk-position-small" href="#" data-uk-slidenav-previous data-uk-slider-item="previous"></a>
                         <a className="uk-position-top-right uk-position-small" href="#" data-uk-slidenav-next data-uk-slider-item="next"></a>
                     </div>
-                    <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
                 </div>
             </Container>
         </>
