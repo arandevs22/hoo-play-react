@@ -42,13 +42,34 @@ export const SerieDetails = () => {
                         </Link>
                     ))}
                 </Stack>
-                <hr color={"#232323"} />
-                <Typography className="uk-margin-small-bottom" variant="body1">
-                    Sinopsis
-                </Typography>
-                <Typography variant="body2" color={"gray"}>
+                <Typography mb={2} variant="body2" color={"gray"}>
                     {serie.overview}
                 </Typography>
+                {serie.seasons.map((season) => (
+                    <Card sx={{ display: 'flex' }} key={season.id}>
+                        <CardMedia
+                            component='img'
+                            sx={{ width: 100 }}
+                            image={`https://image.tmdb.org/t/p/w200${season.poster_path}`}
+                            alt={season.id}
+                        />
+                        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                            <CardContent sx={{ flex: '1 0 auto' }}>
+                                <Typography component='div' variant='h6'>
+                                    {season.name}
+                                </Typography>
+                                <Typography mb={1} variant='subtitle1' component='div'>
+                                    {season.episode_count} episodios
+                                </Typography>
+                            </CardContent>
+                            <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                                <Button className='season'>
+                                    Ver Episodios
+                                </Button>
+                            </Box>
+                        </Box>
+                    </Card>
+                ))}
             </Container>
         </>
     )
