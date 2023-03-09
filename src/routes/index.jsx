@@ -32,6 +32,7 @@ import { loaderMoviesSuspense, MoviesSuspense } from "../pages/movies-category/M
 import { loaderMoviesBelica, MoviesBelica } from "../pages/movies-category/MoviesBelica";
 import { loaderMoviesWestern, MoviesWestern } from "../pages/movies-category/MoviesWestern";
 import { loaderSeriesSeasons, SeriesSeasons } from "../components/SeriesSeasons";
+import { loaderSeriesEpisodes, SeriesEpisodes } from "../components/SeriesEpisodes";
 
 
 
@@ -170,14 +171,19 @@ export const router = createBrowserRouter([
                 loader: loaderSeries
             },
             {
-                path: 'series/id/:id',
+                path: '/series/id/:id',
                 element: <SerieDetails />,
                 loader: loaderSerieDetails
             },
             {
-                path: 'series/id/:id/season/:season_number',
+                path: '/series/id/:id/season/:season_number',
                 element: <SeriesSeasons />,
                 loader: loaderSeriesSeasons
+            },
+            {
+                path: '/series/id/:id/season/:season_number/episode/:episode_number',
+                element: <SeriesEpisodes />,
+                loader: loaderSeriesEpisodes
             },
             {
                 path: '/juegos/',

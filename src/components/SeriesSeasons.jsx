@@ -1,8 +1,10 @@
 import { Button, Typography, Container, IconButton, Box, Card, CardMedia, CardContent, CardActions } from "@mui/material";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export const SeriesSeasons = () => {
+
+    const navigate = useNavigate();
 
     const { seriesSeasons } = useLoaderData();
 
@@ -57,7 +59,7 @@ export const SeriesSeasons = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" className="season">
+                                    <Button onClick={() => navigate(`/series/id/${episode.show_id}/season/${seriesSeasons.season_number}/episode/${episode.episode_number}`)} size="small" className="season">
                                         ver episodio
                                     </Button>
                                 </CardActions>
