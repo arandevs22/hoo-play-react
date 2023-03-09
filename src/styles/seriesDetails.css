@@ -1,0 +1,3 @@
+.JoyCard-root {
+    background-color: var(--joy-palette-neutral-solidBg, var(--joy-palette-neutral-600, #232323)) !important;
+}

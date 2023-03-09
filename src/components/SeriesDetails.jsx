@@ -1,7 +1,7 @@
-import { Button, Typography, Container, IconButton, Stack, Divider, Box, Card } from "@mui/material";
+import { Box, Button, Card, CardContent, CardMedia, Container, IconButton, Stack, Typography } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { AspectRatio } from "@mui/joy";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import '../styles/seriesDetails.css';
 
 
 
@@ -23,7 +23,7 @@ export const SerieDetails = () => {
                     <IconButton
                         onClick={backButton}
                     >
-                        <ArrowBackIosIcon />
+                        <ArrowBackIcon />
                     </IconButton>
                 </div>
                 <div className="uk-position-bottom uk-margin-left">
@@ -42,44 +42,6 @@ export const SerieDetails = () => {
                         </Link>
                     ))}
                 </Stack>
-                <Box
-                    sx={{
-                        display: "flex",
-                        gap: 1,
-                        py: 1,
-                        overflow: "auto",
-                        width: 343,
-                        scrollSnapType: "x mandatory",
-                        "& > *": {
-                            scrollSnapAlign: "center",
-                        },
-                        "::-webkit-scrollbar": { display: "none" },
-                    }}
-                >
-                    {serie.seasons.map((season) => (
-                        <Card
-                            orientation="horizontal"
-                            key={season.id}
-                            variant="outlined"
-                            sx={{
-                                gap: 2,
-                                "--Card-padding": (theme) => theme.spacing(2),
-                            }}
-                        >
-                            <AspectRatio ratio="1" sx={{ minwidth: 60 }}>
-                                <img src={`https://image.tmdb.org/t/p/w200${season.poster_path}`} alt={season.id} />
-                            </AspectRatio>
-                            <Box sx={{ whiteSpace: "nowrap" }}>
-                                <Typography fontWeight="md">
-                                    {season.name}
-                                </Typography>
-                                <Typography level="body2">
-                                    {season.espisode_count} Episodios
-                                </Typography>
-                            </Box>
-                        </Card>
-                    ))}
-                </Box>
                 <hr color={"#232323"} />
                 <Typography className="uk-margin-small-bottom" variant="body1">
                     Sinopsis
