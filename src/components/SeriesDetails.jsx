@@ -46,29 +46,32 @@ export const SerieDetails = () => {
                     {serie.overview}
                 </Typography>
                 {serie.seasons.map((season) => (
-                    <Card sx={{ display: 'flex' }}>
-                        <CardMedia
-                            component="img"
-                            sx={{ width: 100 }}
-                            image={`https://image.tmdb.org/t/p/w200${season.poster_path}`}
-                            alt="Live from space album cover"
-                        />
-                        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                            <CardContent sx={{ flex: '1 0 auto' }}>
-                                <Typography component="div" variant="h6">
-                                    {season.name}
-                                </Typography>
-                                <Typography variant="subtitle1" color="rgba(255, 255, 255, 0.7)" component="div">
-                                    {season.episode_count} episodios
-                                </Typography>
-                            </CardContent>
-                            <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                                <Button className='season'>
-                                    Ver Episodios
-                                </Button>
+                    <Box mb={1}>
+                        <Card sx={{ display: 'flex' }}>
+                            <CardMedia
+                                component="img"
+                                sx={{ width: 100 }}
+                                image={`https://image.tmdb.org/t/p/w200${season.poster_path}`}
+                                alt="Live from space album cover"
+                            />
+                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                                <CardContent sx={{ flex: '1 0 auto' }}>
+                                    <Typography component="div" variant="h6">
+                                        {season.name}
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="rgba(255, 255, 255, 0.7)" component="div">
+                                        {season.episode_count} episodios
+                                    </Typography>
+                                </CardContent>
+                                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                                    <Button className='season'>
+                                        Ver Episodios
+                                    </Button>
+                                </Box>
                             </Box>
-                        </Box>
-                    </Card>
+                        </Card>
+                    </Box>
+
                 ))}
             </Container>
         </>
