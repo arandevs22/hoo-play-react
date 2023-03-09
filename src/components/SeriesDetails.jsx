@@ -42,23 +42,23 @@ export const SerieDetails = () => {
                         </Link>
                     ))}
                 </Stack>
-                <Typography mb={2} variant="body2" color={"gray"}>
+                <Typography mb={2} variant="body2" color={"rgba(255, 255, 255, 0.7)"}>
                     {serie.overview}
                 </Typography>
                 {serie.seasons.map((season) => (
-                    <Card sx={{ display: 'flex' }} key={season.id}>
+                    <Card sx={{ display: 'flex' }}>
                         <CardMedia
-                            component='img'
+                            component="img"
                             sx={{ width: 100 }}
                             image={`https://image.tmdb.org/t/p/w200${season.poster_path}`}
-                            alt={season.id}
+                            alt="Live from space album cover"
                         />
                         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                             <CardContent sx={{ flex: '1 0 auto' }}>
-                                <Typography component='div' variant='h6'>
+                                <Typography component="div" variant="h6">
                                     {season.name}
                                 </Typography>
-                                <Typography mb={1} variant='subtitle1' component='div'>
+                                <Typography variant="subtitle1" color="rgba(255, 255, 255, 0.7)" component="div">
                                     {season.episode_count} episodios
                                 </Typography>
                             </CardContent>
