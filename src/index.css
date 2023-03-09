@@ -28,3 +28,7 @@ html {
 .uk-grid-small.slide-cover {
   margin-right: -50px;
 }
+
+.uk-height-medium {
+  height: 220px;
+}
