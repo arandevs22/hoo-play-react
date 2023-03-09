@@ -36,7 +36,7 @@ export const SeriesSeasons = () => {
                 <Typography mb={2} variant="body2" color={"rgba(255, 255, 255, 0.7)"}>
                     {seriesSeasons.overview}
                 </Typography>
-                <div data-uk-slider>
+                <div className="uk-margin-bottom" data-uk-slider>
                     <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex='-1'>
                         <ul className="uk-slider-items uk-child-width-1-1 uk-grid-small" data-uk-grid>
                             {seriesSeasons.episodes.map((episode) => (
