@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import '../../styles/slider.css';
+import { Container, Typography } from '@mui/material'
 
 export const SliderDeportes = () => {
 
@@ -19,6 +20,11 @@ export const SliderDeportes = () => {
 
     return (
         <>
+            <Container>
+                <Typography variant="h6" color={"#fff"}>
+                    Canales Deportivos
+                </Typography>
+            </Container>
             <div data-uk-slider>
                 <ul className='uk-slider-items uk-child-width-1-4 uk-grid-small slide-cover' data-uk-grid>
                     {deportes.map((channel) => (
