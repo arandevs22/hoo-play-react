@@ -48,11 +48,6 @@ export const BottomNav = () => {
                         icon={<OndemandVideoIcon />}
                         onClick={() => navigate('/series')}
                     />
-                    <BottomNavigationAction
-                        label="Juegos"
-                        icon={<SportsEsportsIcon />}
-                        onClick={() => navigate('/juegos')}
-                    />
                 </BottomNavigation>
             </Paper>
             <Offset />
