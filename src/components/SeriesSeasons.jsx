@@ -14,33 +14,35 @@ export const SeriesSeasons = () => {
 
     return (
         <>
-            <div className="uk-position-relative">
-                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${seriesSeasons.poster_path})` }}>
+            <Box>
+                <div className="uk-position-relative">
+                    <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${seriesSeasons.poster_path})` }}>
+                    </div>
+                    <div className="uk-overlay-primary uk-position-cover"></div>
+                    <div className="uk-position-top-left uk-margin-left uk-margin-top">
+                        <IconButton
+                            onClick={backButton}
+                        >
+                            <ArrowBackIcon className="backBtn" />
+                        </IconButton>
+                    </div>
+                    <div className="uk-position-bottom uk-margin-left">
+                        <Typography mb={1} variant="h5" color={'#fff'}>
+                            {seriesSeasons.name}
+                        </Typography>
+                        <Typography variant="subtitle1" color="rgba(255, 255, 255, 0.7)">
+                            Fecha de estreno {seriesSeasons.air_date}
+                        </Typography>
+                    </div>
                 </div>
-                <div className="uk-overlay-primary uk-position-cover"></div>
-                <div className="uk-position-top-left uk-margin-left uk-margin-top">
-                    <IconButton
-                        onClick={backButton}
-                    >
-                        <ArrowBackIcon className="backBtn" />
-                    </IconButton>
-                </div>
-                <div className="uk-position-bottom uk-margin-left">
-                    <Typography mb={1} variant="h5" color={'#fff'}>
-                        {seriesSeasons.name}
-                    </Typography>
-                    <Typography variant="subtitle1" color="rgba(255, 255, 255, 0.7)">
-                        Fecha de estreno {seriesSeasons.air_date}
-                    </Typography>
-                </div>
-            </div>
+            </Box>
             <Container>
                 <Typography mb={2} variant="body2" color={"rgba(255, 255, 255, 0.7)"}>
                     {seriesSeasons.overview}
                 </Typography>
                 <Box mb={3}>
                     {seriesSeasons.episodes.map((episode) => (
-                        <Box mb={1}>
+                        <Box mb={1} key={episode.id}>
                             <Card >
                                 <CardMedia
                                     sx={{ height: 140 }}

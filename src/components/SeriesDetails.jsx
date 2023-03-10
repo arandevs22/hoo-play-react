@@ -46,7 +46,7 @@ export const SerieDetails = () => {
                     {serie.overview}
                 </Typography>
                 {serie.seasons.map((season) => (
-                    <Box mb={1}>
+                    <Box mb={1} key={season.id}>
                         <Card sx={{ display: 'flex' }}>
                             <CardMedia
                                 component="img"
