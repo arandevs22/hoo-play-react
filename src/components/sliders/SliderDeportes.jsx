@@ -1,4 +1,6 @@
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import '../../styles/slider.css';
 
 export const SliderDeportes = () => {
 
@@ -17,15 +19,17 @@ export const SliderDeportes = () => {
 
     return (
         <>
-            <motion.div>
-                <motion.div>
+            <div data-uk-slider>
+                <ul className='uk-slider-items uk-child-width-1-4 uk-grid-small slide-cover' data-uk-grid>
                     {deportes.map((channel) => (
-                        <motion.div>
-                            <img src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fcanales%2Flogos%2F${channel.img}.jpg?alt=media&token=c1c23d46-cac3-4d48-8390-10a5f9ddfa65`} />
-                        </motion.div>
+                        <Link to={`/canales/id/${channel.id}`} key={channel.id}>
+                            <li>
+                                <img className="cover" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fcanales%2Flogos%2F${channel.img}.jpg?alt=media&token=c1c23d46-cac3-4d48-8390-10a5f9ddfa65`} alt={channel.title} />
+                            </li>
+                        </Link>
                     ))}
-                </motion.div>
-            </motion.div>
+                </ul>
+            </div>
         </>
     )
 }

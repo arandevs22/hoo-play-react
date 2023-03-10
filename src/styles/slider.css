@@ -1,0 +1,11 @@
+.item {}
+
+.slider {
+    display: flex;
+    cursor: grab;
+}
+
+.slider-container {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
