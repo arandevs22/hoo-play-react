@@ -4,6 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import '../styles/movies.css';
 import '../styles/details.css'
 import { TopNav } from "../components/TopNav";
+import GoTop from "../components/Gotop";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -43,6 +44,7 @@ export const Series = () => {
                     </ThemeProvider>
                 </Grid>
             </Container>
+            <GoTop />
         </>
     )
 }

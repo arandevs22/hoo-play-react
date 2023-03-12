@@ -2,6 +2,7 @@ import { Button, Typography, Container, IconButton, Stack, Divider, Box } from "
 import { Link, useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import GoTop from "./Gotop";
 
 export const MovieDetails = () => {
 
@@ -49,6 +50,7 @@ export const MovieDetails = () => {
                     {movie.overview}
                 </Typography>
             </Container>
+            <GoTop />
         </>
     )
 }

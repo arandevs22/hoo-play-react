@@ -2,6 +2,7 @@ import { Container, Typography, Paper, styled, Grid, ThemeProvider, createTheme,
 import { useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
 import { Link } from "react-router-dom";
+import GoTop from "../components/Gotop";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -38,6 +39,7 @@ export const Channels = () => {
                     </ThemeProvider>
                 </Grid>
             </Container>
+            <GoTop />
         </>
     )
 }

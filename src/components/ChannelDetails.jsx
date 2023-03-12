@@ -2,6 +2,7 @@ import { Button, Typography, Container, IconButton, Box } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import GoTop from "./Gotop";
 
 
 export const ChannelDetails = () => {
@@ -51,6 +52,7 @@ export const ChannelDetails = () => {
                     {channel.sinopsis}
                 </Typography>
             </Container>
+            <GoTop />
         </>
     )
 }

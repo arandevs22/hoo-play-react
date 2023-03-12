@@ -2,6 +2,7 @@ import { Star } from "@mui/icons-material";
 import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography, AppBar, Toolbar, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
+import GoTop from "../components/Gotop";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -41,6 +42,7 @@ export const Movies = () => {
                     </ThemeProvider>
                 </Grid>
             </Container>
+            <GoTop />
         </>
     )
 }

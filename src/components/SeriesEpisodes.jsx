@@ -1,7 +1,8 @@
 import { Button, Typography, Container, IconButton, Stack, Divider, Box } from "@mui/material";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import GoTop from "./Gotop";
 
 export const SeriesEpisodes = () => {
 
@@ -45,6 +46,7 @@ export const SeriesEpisodes = () => {
                     {episode.overview}
                 </Typography>
             </Container>
+            <GoTop />
         </>
     )
 }

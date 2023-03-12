@@ -1,6 +1,7 @@
 import { Button, Typography, Container, IconButton, Box, Card, CardMedia, CardContent, CardActions } from "@mui/material";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import GoTop from "./Gotop";
 
 export const SeriesSeasons = () => {
 
@@ -70,6 +71,7 @@ export const SeriesSeasons = () => {
                     ))}
                 </Box>
             </Container>
+            <GoTop />
         </>
     )
 }

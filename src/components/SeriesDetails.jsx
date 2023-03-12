@@ -2,6 +2,7 @@ import { Box, Button, Card, CardContent, CardMedia, Container, IconButton, Stack
 import { Link, useLoaderData } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import '../styles/seriesDetails.css';
+import GoTop from "./Gotop";
 
 
 
@@ -75,6 +76,7 @@ export const SerieDetails = () => {
                     </Box>
                 ))}
             </Container>
+            <GoTop />
         </>
     )
 }

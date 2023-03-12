@@ -2,6 +2,7 @@ import { Button, Typography, Container, IconButton } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import GoTop from "./Gotop";
 
 
 export const GameDetails = () => {
@@ -58,6 +59,7 @@ export const GameDetails = () => {
                     {game.sinopsis}
                 </Typography>
             </Container>
+            <GoTop />
         </>
     )
 }
