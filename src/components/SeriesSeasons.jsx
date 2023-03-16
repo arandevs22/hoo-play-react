@@ -17,7 +17,7 @@ export const SeriesSeasons = () => {
         <>
             <Box>
                 <div className="uk-position-relative">
-                    <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${seriesSeasons.poster_path})` }}>
+                    <div className="uk-background-cover uk-height-medium series uk-panel uk-flex uk-flex-center uk-flex-middle " style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${seriesSeasons.poster_path})` }}>
                     </div>
                     <div className="uk-overlay-primary uk-position-cover"></div>
                     <div className="uk-position-top-left uk-margin-left uk-margin-top">
@@ -47,7 +47,7 @@ export const SeriesSeasons = () => {
                             <Card >
                                 <CardMedia
                                     sx={{ height: 140 }}
-                                    image={`https://image.tmdb.org/t/p/w400${episode.still_path}`}
+                                    image={`https://image.tmdb.org/t/p/original${episode.still_path}`}
                                     title={episode.name}
                                 />
                                 <CardContent>
@@ -55,7 +55,7 @@ export const SeriesSeasons = () => {
                                         {episode.name}
                                     </Typography>
                                     <Typography variant="subtitle1" color={"rgba(255, 255, 255, 0.7)"}>
-                                        Season {seriesSeasons.season_number} · Episode {episode.episode_number}
+                                        Temporada {seriesSeasons.season_number} · Episodio {episode.episode_number}
                                     </Typography>
                                     <Typography variant="subtitle2" color={"rgba(255, 255, 255, 0.7)"}>
                                         {episode.air_date}

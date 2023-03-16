@@ -17,6 +17,10 @@ html {
   width: 50px;
 }
 
+.uk-height-medium.series {
+  height: 500px;
+}
+
 /* Categories */
 .genreTitle {
   text-transform: capitalize;
