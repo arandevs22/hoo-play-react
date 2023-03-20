@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GoTop from "./Gotop";
-import ReactPlayer from "react-player";
 
 export const SeriesEpisodes = () => {
 
@@ -38,7 +37,6 @@ export const SeriesEpisodes = () => {
                 </div>
             </Box>
             <Container className="uk-margin-bottom" >
-                <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
                 <Box mb={2}>
                     <Button fullWidth={true} href={`go:${episode.id}`} variant="contained" startIcon={<PlayCircleOutlineIcon />}>
                         reproducir episodio {episode.episode_number}
