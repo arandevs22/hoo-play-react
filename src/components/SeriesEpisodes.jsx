@@ -47,7 +47,6 @@ export const SeriesEpisodes = () => {
                     {episode.overview}
                 </Typography>
             </Container>
-            <Video />
             <GoTop />
         </>
     )
