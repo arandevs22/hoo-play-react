@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GoTop from "./Gotop";
+import { Video } from "./Video";
 
 export const SeriesEpisodes = () => {
 
@@ -46,6 +47,7 @@ export const SeriesEpisodes = () => {
                     {episode.overview}
                 </Typography>
             </Container>
+            <Video />
             <GoTop />
         </>
     )
