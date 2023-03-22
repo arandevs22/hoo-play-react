@@ -46,7 +46,7 @@ export const Channels = () => {
 
 
 export const loaderChannels = async () => {
-    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/channels/`);
+    const res = await fetch(`https://retro-game.onrender.com/api/channels`);
 
     const channels = await res.json();
 
