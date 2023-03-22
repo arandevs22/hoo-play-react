@@ -78,7 +78,7 @@ export const SeriesSeasons = () => {
 
 
 export const loaderSeriesSeasons = async ({ params }) => {
-    const res = await fetch(`https://api.themoviedb.org/3/tv/${params.id}/season/${params.season_number}?api_key=e9a6dda420749a57b0f4f34699998c5a&language=es-MX`);
+    const res = await fetch(`https://api.themoviedb.org/3/tv/${params.id}/season/${params.season_number}?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
 
     const seriesSeasons = await res.json();
 
