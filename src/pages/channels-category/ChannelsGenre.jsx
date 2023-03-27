@@ -1,4 +1,5 @@
-import { Container, createTheme, Paper, styled, Typography, Grid, ThemeProvider, } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+import { Container, createTheme, Paper, styled, Typography, Grid, ThemeProvider, AppBar, Toolbar, IconButton, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -13,12 +14,29 @@ export const ChannelsGenre = () => {
 
     const { channelsGenre } = useLoaderData();
 
+    const backButton = () => {
+        history.back();
+    }
+
+    const OffSet = styled('div')(({ theme }) => theme.mixins.toolbar)
+
     return (
         <>
-            <Container className="uk-margin-top">
-                <Typography mb={2} className="genreTitle" variant="h6">
-                    Canales {channelsGenre[0].genre}
-                </Typography>
+            <AppBar>
+                <Toolbar>
+                    <IconButton
+                        onClick={backButton}
+                        sx={{ mr: 3 }}
+                    >
+                        <ArrowBack />
+                    </IconButton>
+                    <Typography className="genreTitle" variant="h6">
+                        Canales {channelsGenre[0].genre}
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <OffSet />
+            <Container>
                 <Grid mb={5} container spacing={1} >
                     <ThemeProvider theme={darkTheme}>
                         {channelsGenre.map((channel) => (

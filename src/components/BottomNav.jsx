@@ -5,6 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import MovieIcon from '@mui/icons-material/Movie';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { useNavigate } from "react-router-dom";
 
 
@@ -45,6 +46,11 @@ export const BottomNav = () => {
                         label="Series"
                         icon={<OndemandVideoIcon />}
                         onClick={() => navigate('/series')}
+                    />
+                    <BottomNavigationAction
+                        label="Juegos"
+                        icon={<SportsEsportsIcon />}
+                        onClick={() => navigate('/juegos')}
                     />
                 </BottomNavigation>
             </Paper>

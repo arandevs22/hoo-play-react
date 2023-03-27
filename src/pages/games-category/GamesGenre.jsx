@@ -1,18 +1,34 @@
-import { Container, ImageList, ImageListItem, Typography, } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+import { AppBar, Box, Container, IconButton, ImageList, ImageListItem, styled, Toolbar, Typography, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
-import { TopNav } from "../../components/TopNav";
 
 export const JuegosGenre = () => {
 
     const { gamesGenre } = useLoaderData();
 
+    const backButton = () => {
+        history.back();
+    }
+
+    const OffSet = styled('div')(({ theme }) => theme.mixins.toolbar);
+
     return (
         <>
-            <TopNav />
+            <AppBar position="fixed">
+                <Toolbar>
+                    <IconButton
+                        onClick={backButton}
+                        sx={{ mr: 3 }}
+                    >
+                        <ArrowBack />
+                    </IconButton>
+                    <Typography className="genreTitle" variant="h6">
+                        {gamesGenre[0].genre} Games
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <OffSet />
             <Container>
-                <Typography className="genreTitle" variant="h6">
-                    {gamesGenre[0].genre} games
-                </Typography>
                 <ImageList gap={10} cols={3}>
                     {gamesGenre.map((game) => (
                         <Link to={`/juegos/id/${game.id}`} key={game.poster}>
@@ -28,7 +44,7 @@ export const JuegosGenre = () => {
 }
 
 export const loaderGameGenre = async ({ params }) => {
-    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance/${params.genre}`);
+    const res = await fetch(`https://retro-game.onrender.com/api/games/game-boy-advance/${params.genre}`);
 
     const gamesGenre = await res.json();
 

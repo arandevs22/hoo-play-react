@@ -1,8 +1,8 @@
 import { Button, Typography, Container, IconButton } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import GoTop from "./Gotop";
+import { ArrowBack } from "@mui/icons-material";
 
 
 export const GameDetails = () => {
@@ -26,7 +26,7 @@ export const GameDetails = () => {
                     <IconButton
                         onClick={backButton}
                     >
-                        <ArrowBackIosIcon />
+                        <ArrowBack className="backBtn" />
                     </IconButton>
                 </div>
                 <div className="uk-position-bottom-left uk-margin-left">
@@ -66,7 +66,7 @@ export const GameDetails = () => {
 
 
 export const loaderGameDetails = async ({ params }) => {
-    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance/id/${params.id}`);
+    const res = await fetch(`https://retro-game.onrender.com/api/games/game-boy-advance/id/${params.id}`);
 
     const game = await res.json();
 

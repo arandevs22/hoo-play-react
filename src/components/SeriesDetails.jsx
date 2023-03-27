@@ -36,11 +36,9 @@ export const SerieDetails = () => {
             <Container className="uk-margin-bottom" >
                 <Stack mb={2} direction="row" spacing={1} >
                     {serie.networks.map((provider) => (
-                        <Link className="uk-link-reset" to={`/juegos/genre/${provider.name}`} key={provider.id}>
-                            <Button className="detailsBtn uk-margin-small-right" variant="outlined">
-                                {provider.name}
-                            </Button>
-                        </Link>
+                        <Button className="detailsBtn uk-margin-small-right" variant="outlined">
+                            {provider.name}
+                        </Button>
                     ))}
                 </Stack>
                 <Typography mb={2} variant="body2" color={"rgba(255, 255, 255, 0.7)"}>

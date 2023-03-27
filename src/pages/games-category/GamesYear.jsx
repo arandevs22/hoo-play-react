@@ -1,18 +1,34 @@
-import { Container, ImageList, ImageListItem, Typography, } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+import { AppBar, Container, IconButton, ImageList, ImageListItem, styled, Toolbar, Typography, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
-import { TopNav } from "../../components/TopNav";
 
 export const GameYears = () => {
 
     const { gamesYear } = useLoaderData();
 
+    const backButton = () => {
+        history.back();
+    }
+
+    const OffSet = styled('div')(({ theme }) => theme.mixins.toolbar)
+
     return (
         <>
-            <TopNav />
+            <AppBar position="fixed">
+                <Toolbar>
+                    <IconButton
+                        onClick={backButton}
+                        sx={{ mr: 3 }}
+                    >
+                        <ArrowBack />
+                    </IconButton>
+                    <Typography className="genreTitle" variant="h6">
+                        {gamesYear[0].year} Games
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <OffSet />
             <Container>
-                <Typography className="genreTitle" variant="h6">
-                    {gamesYear[0].year} games
-                </Typography>
                 <ImageList gap={10} cols={3}>
                     {gamesYear.map((game) => (
                         <Link to={`/juegos/id/${game.id}`} key={game.poster}>
@@ -28,7 +44,7 @@ export const GameYears = () => {
 }
 
 export const loaderGameYear = async ({ params }) => {
-    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance/year/${params.year}`);
+    const res = await fetch(`https://retro-game.onrender.com/api/games/game-boy-advance/year/${params.year}`);
 
     const gamesYear = await res.json();
 

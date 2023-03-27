@@ -26,7 +26,7 @@ import { loaderMoviesHistoria, MoviesHistoria } from "../pages/movies-category/M
 import { loaderMoviesMusica, MoviesMusica } from "../pages/movies-category/MoviesMusica";
 import { loaderMoviesMisterio, MoviesMisterio } from "../pages/movies-category/MoviesMisterio";
 import { loaderMoviesRomance, MoviesRomance } from "../pages/movies-category/MoviesRomance";
-import { loaderMoviesCienciaFiccion, MoviesCienciaFiccion } from "../pages/movies-category/MoviesCienciaFiccion";
+import { loaderMoviesFiccion, MoviesFiccion } from "../pages/movies-category/MoviesCienciaFiccion";
 import { loaderMoviesPeliculaDeTv, MoviesPeliculaDeTv } from "../pages/movies-category/MoviesPeliculaDeTv";
 import { loaderMoviesSuspense, MoviesSuspense } from "../pages/movies-category/MoviesSuspense";
 import { loaderMoviesBelica, MoviesBelica } from "../pages/movies-category/MoviesBelica";
@@ -142,8 +142,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/peliculas/genre/878',
-                element: <MoviesCienciaFiccion />,
-                loader: loaderMoviesCienciaFiccion
+                element: <MoviesFiccion />,
+                loader: loaderMoviesFiccion
             },
             {
                 path: '/peliculas/genre/10770',

@@ -1,6 +1,7 @@
 import { Star } from "@mui/icons-material";
 import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography, AppBar, Toolbar, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
+import GoTop from "../components/Gotop";
 import { TopNav } from "../components/TopNav";
 
 
@@ -38,12 +39,13 @@ export const Games = () => {
                     </ThemeProvider>
                 </Grid>
             </Container>
+            <GoTop />
         </>
     )
 }
 
 export const loaderGames = async () => {
-    const res = await fetch(`https://apiretrogame-production.up.railway.app/api/games/game-boy-advance`);
+    const res = await fetch(`https://retro-game.onrender.com/api/games/game-boy-advance`);
 
     const games = await res.json();
 

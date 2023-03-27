@@ -1,5 +1,5 @@
-import { Star } from "@mui/icons-material";
-import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography } from "@mui/material";
+import { ArrowBack, Star } from "@mui/icons-material";
+import { AppBar, Container, createTheme, Grid, IconButton, Paper, styled, ThemeProvider, Toolbar, Typography } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -15,16 +15,33 @@ export const MoviesAccion = () => {
 
     const { moviesAccion } = useLoaderData();
 
+    const backButton = () => {
+        history.back();
+    }
+
+    const OffSet = styled('div')(({ theme }) => theme.mixins.toolbar)
+
     const accion = moviesAccion.items.filter(movie => {
         return movie.genre_ids.includes(28)
     })
 
     return (
         <>
-            <Container className="uk-margin-top">
-                <Typography mb={2} color="#fff" variant="h6">
-                    Peliculas de Acción
-                </Typography>
+            <AppBar position="fixed">
+                <Toolbar>
+                    <IconButton
+                        onClick={backButton}
+                        sx={{ mr: 3 }}
+                    >
+                        <ArrowBack />
+                    </IconButton>
+                    <Typography className="genreTitle" variant="h6">
+                        Peliculas de Acción
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <OffSet />
+            <Container>
                 <Grid mb={5} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>
                         {accion.map((movie) => (

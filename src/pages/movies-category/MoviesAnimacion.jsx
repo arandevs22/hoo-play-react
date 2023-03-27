@@ -1,5 +1,5 @@
-import { Star } from "@mui/icons-material";
-import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography } from "@mui/material";
+import { Star, ArrowBack } from "@mui/icons-material";
+import { AppBar, Container, createTheme, Grid, IconButton, Paper, styled, ThemeProvider, Toolbar, Typography } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -11,6 +11,12 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
+const backButton = () => {
+    history.back();
+}
+
+const OffSet = styled('div')(({ theme }) => theme.mixins.toolbar)
+
 export const MoviesAnimacion = () => {
 
     const { moviesAnimacion } = useLoaderData();
@@ -21,10 +27,21 @@ export const MoviesAnimacion = () => {
 
     return (
         <>
-            <Container className="uk-margin-top">
-                <Typography mb={2} color="#fff" variant="h6">
-                    Peliculas de Animación
-                </Typography>
+            <AppBar position="fixed">
+                <Toolbar>
+                    <IconButton
+                        onClick={backButton}
+                        sx={{ mr: 3 }}
+                    >
+                        <ArrowBack />
+                    </IconButton>
+                    <Typography className="genreTitle" variant="h6">
+                        Peliculas de Animación
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <OffSet />
+            <Container>
                 <Grid mb={5} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>
                         {animacion.map((movie) => (
