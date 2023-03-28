@@ -20,7 +20,7 @@ export const GameDetails = () => {
                 </div>
                 <div className="uk-overlay-primary uk-position-cover"></div>
                 <div className="uk-position-top-right uk-margin-top uk-margin-right">
-                    <img className="gameLogo" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fjuegos%2Flogo%2F${game.logo}?alt=media&token=c1c23d46-cac3-4d48-8390-10a5f9ddfa65`} alt={game.title} />
+                    <img className="gameLogo" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Fjuegos%2Flogo%2F${game.id}.png?alt=media&token=c1c23d46-cac3-4d48-8390-10a5f9ddfa65`} alt={game.title} />
                 </div>
                 <div className="uk-position-top-left uk-margin-left uk-margin-top">
                     <IconButton
