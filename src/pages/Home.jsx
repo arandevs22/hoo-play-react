@@ -3,15 +3,21 @@ import { SliderPrincipal } from "../components/sliders/SliderPrincipal";
 import { TopNav } from "../components/TopNav";
 import { Box } from '@mui/material';
 import GoTop from "../components/Gotop";
+import { SliderInfantiles } from "../components/sliders/SliderTopRank";
 
 export const Home = () => {
     return (
         <>
             <TopNav />
-            <Box mb={2}>
+            <Box mb={5}>
                 <SliderPrincipal />
             </Box>
-            <SliderDeportes />
+            <Box mb={3}>
+                <SliderDeportes />
+            </Box>
+            <Box mb={3}>
+                <SliderInfantiles />
+            </Box>
             <GoTop />
         </>
     )

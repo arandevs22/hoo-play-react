@@ -1,0 +1,14 @@
+.uk-position-top-left.banner {
+    top: 15px;
+    left: 13px;
+}
+
+.uk-position-bottom-left.btn-slider {
+    bottom: 15px;
+    left: 13px;
+}
+
+.logo-slide {
+    max-width: 150px;
+    max-height: 75px;
+}
