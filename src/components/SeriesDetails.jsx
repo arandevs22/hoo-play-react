@@ -36,7 +36,7 @@ export const SerieDetails = () => {
             <Container className="uk-margin-bottom" >
                 <Stack mb={2} direction="row" spacing={1} >
                     {serie.networks.map((provider) => (
-                        <Button className="detailsBtn uk-margin-small-right" variant="outlined">
+                        <Button key={provider.name} className="detailsBtn uk-margin-small-right" variant="outlined">
                             {provider.name}
                         </Button>
                     ))}
