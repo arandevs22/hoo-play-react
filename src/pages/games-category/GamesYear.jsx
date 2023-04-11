@@ -29,7 +29,7 @@ export const GameYears = () => {
             </AppBar>
             <OffSet />
             <Container>
-                <ImageList gap={10} cols={3}>
+                <ImageList gap={10} cols={2}>
                     {gamesYear.map((game) => (
                         <Link to={`/juegos/id/${game.id}`} key={game.poster}>
                             <ImageListItem>
