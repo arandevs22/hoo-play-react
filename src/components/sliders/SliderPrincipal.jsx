@@ -43,8 +43,8 @@ export const SliderPrincipal = () => {
                                     <img className="logo-slide" src={`https://ik.imagekit.io/hooplay/o/hoo-play%2Fimagenes%2Flogos%2F${movie.id}.webp?alt=media&token=4a487a31-92b4-4a20-89c6-57a63694e035`} alt={movie.title} />
                                 </div>
                                 <div className="uk-position-bottom-left btn-slider">
-                                    <Button variant="contained" color="primary" onClick={() => navigate(`/peliculas/id/${movie.id}`)} startIcon={<VisibilityIcon color="#01EB78" />}>
-                                        VER AHORA
+                                    <Button className="sliderBtn" variant="outlined" onClick={() => navigate(`/peliculas/id/${movie.id}`)} startIcon={<VisibilityIcon color="#01EB78" />}>
+                                        VER  AHORA
                                     </Button>
                                 </div>
                             </div>

@@ -1,8 +1,9 @@
 import { Star } from "@mui/icons-material";
-import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography, AppBar, Toolbar, } from "@mui/material";
+import { Container, createTheme, Grid, Paper, styled, ThemeProvider, Typography, AppBar, Toolbar, Button, Box, } from "@mui/material";
 import { Link, useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
 import GoTop from "../components/Gotop";
+import { useState } from "react";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -15,16 +16,22 @@ const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
 export const Movies = () => {
 
+    const [visible, setVisible] = useState(20);
+
     const { movies } = useLoaderData();
+
+    const loadMore = () => {
+        setVisible(visible + 20)
+    }
 
     return (
         <>
             <TopNav />
             <Container >
-                <Grid mb={5} container spacing={1}>
+                <Grid mb={3} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>
-                        {movies.items.map((movie) => (
-                            <Grid item xs={4} key={movie.id}>
+                        {movies.items.slice(0, visible).map((movie) => (
+                            <Grid item xs={6} key={movie.id}>
                                 <Item elevation={3}>
                                     <Link to={`/peliculas/id/${movie.id}`}>
                                         <img className="cover" src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
@@ -41,6 +48,11 @@ export const Movies = () => {
 
                     </ThemeProvider>
                 </Grid>
+                <Box mb={3}>
+                    {visible < movies.items.length && (
+                        <Button variant="contained" className="loaderBtn" fullWidth={true} onClick={loadMore}>Mostrar más</Button>
+                    )}
+                </Box>
             </Container>
             <GoTop />
         </>

@@ -8,7 +8,7 @@ export const SliderDeportes = () => {
     const [deportes, setDeportes] = useState([])
 
     useEffect(() => {
-        fetch('https://retro-game.onrender.com/api/channels/genre/deportes')
+        fetch('https://api-retro-game.azurewebsites.net/api/channels/genre/deportes')
             .then((response) => {
                 return response.json()
             })

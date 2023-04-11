@@ -10,14 +10,10 @@
 }
 
 .MuiButtonBase-root.MuiButton-root.detailsBtn {
-    color: #01EB78;
-    background: none;
-}
-
-.MuiButtonBase-root.MuiButton-root.detailsBtn {
     font-size: 0.5rem;
     border: 1px solid #01EB78;
     border-radius: 16px;
+    background: none;
 }
 
 .MuiTypography-root.subtitle {

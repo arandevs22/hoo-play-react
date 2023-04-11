@@ -44,7 +44,7 @@ export const GameYears = () => {
 }
 
 export const loaderGameYear = async ({ params }) => {
-    const res = await fetch(`https://retro-game.onrender.com/api/games/game-boy-advance/year/${params.year}`);
+    const res = await fetch(`https://api-retro-game.azurewebsites.net/api/games/game-boy-advance/year/${params.year}`);
 
     const gamesYear = await res.json();
 

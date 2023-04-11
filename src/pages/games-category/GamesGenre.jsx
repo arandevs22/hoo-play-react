@@ -44,7 +44,7 @@ export const JuegosGenre = () => {
 }
 
 export const loaderGameGenre = async ({ params }) => {
-    const res = await fetch(`https://retro-game.onrender.com/api/games/game-boy-advance/${params.genre}`);
+    const res = await fetch(`https://api-retro-game.azurewebsites.net/api/games/game-boy-advance/${params.genre}`);
 
     const gamesGenre = await res.json();
 

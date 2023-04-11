@@ -12,3 +12,10 @@
     max-width: 150px;
     max-height: 75px;
 }
+
+.MuiButtonBase-root.MuiButton-root.sliderBtn {
+    font-size: 0.6rem;
+    border: 1px solid #01EB78;
+    border-radius: 16px;
+    background: none;
+}

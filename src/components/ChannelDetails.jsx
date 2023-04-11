@@ -59,7 +59,7 @@ export const ChannelDetails = () => {
 
 
 export const loaderChannelDetails = async ({ params }) => {
-    const res = await fetch(`https://retro-game.onrender.com/api/channels/id/${params.id}`);
+    const res = await fetch(`https://api-retro-game.azurewebsites.net/api/channels/id/${params.id}`);
 
     const channel = await res.json();
 

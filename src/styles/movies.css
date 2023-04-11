@@ -16,3 +16,8 @@
 .overage {
     font-size: 1.0rem
 }
+
+
+.MuiButtonBase-root.MuiButton-root.loaderBtn {
+    border-radius: 4px;
+}

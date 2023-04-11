@@ -1,8 +1,9 @@
-import { Container, Typography, Paper, styled, Grid, ThemeProvider, createTheme, AppBar, Toolbar } from "@mui/material";
+import { Container, Typography, Paper, styled, Grid, ThemeProvider, createTheme, AppBar, Toolbar, Box, Button } from "@mui/material";
 import { useLoaderData } from "react-router-dom";
 import { TopNav } from "../components/TopNav";
 import { Link } from "react-router-dom";
 import GoTop from "../components/Gotop";
+import { useState } from "react";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -18,13 +19,19 @@ export const Channels = () => {
 
     const { channels } = useLoaderData();
 
+    const [visible, setVisible] = useState(21);
+
+    const loadMore = () => {
+        setVisible(visible + 21)
+    }
+
     return (
         <>
             <TopNav />
             <Container>
-                <Grid mb={5} container spacing={1} >
+                <Grid mb={3} container spacing={1} >
                     <ThemeProvider theme={darkTheme}>
-                        {channels.map((channel) => (
+                        {channels.slice(0, visible).map((channel) => (
                             <Grid item xs={4} key={channel.id}>
                                 <Item elevation={3}>
                                     <Link to={`/canales/id/${channel.id}`}>
@@ -38,6 +45,11 @@ export const Channels = () => {
                         ))}
                     </ThemeProvider>
                 </Grid>
+                <Box mb={3}>
+                    {visible < channels.length && (
+                        <Button variant="contained" className="loaderBtn" fullWidth={true} onClick={loadMore}>Mostrar Más</Button>
+                    )}
+                </Box>
             </Container>
             <GoTop />
         </>
@@ -46,7 +58,7 @@ export const Channels = () => {
 
 
 export const loaderChannels = async () => {
-    const res = await fetch(`https://retro-game.onrender.com/api/channels`);
+    const res = await fetch(`https://api-retro-game.azurewebsites.net/api/channels`);
 
     const channels = await res.json();
 
