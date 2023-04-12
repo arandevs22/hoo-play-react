@@ -3,7 +3,7 @@ import { SliderPrincipal } from "../components/sliders/SliderPrincipal";
 import { TopNav } from "../components/TopNav";
 import { Box } from '@mui/material';
 import GoTop from "../components/Gotop";
-import { SliderTopRank } from "../components/sliders/SliderTopRank";
+import { SliderTerror } from "../components/sliders/SliderTopRank";
 
 export const Home = () => {
     return (
@@ -14,6 +14,9 @@ export const Home = () => {
             </Box>
             <Box mb={3}>
                 <SliderDeportes />
+            </Box>
+            <Box mb={3}>
+                <SliderTerror />
             </Box>
             <GoTop />
         </>
