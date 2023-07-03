@@ -56,7 +56,7 @@ export const Games = () => {
 }
 
 export const loaderGames = async () => {
-    const res = await fetch(`https://api-retro-game.azurewebsites.net/api/games/game-boy-advance`);
+    const res = await fetch(`https://befitting-jail-production.up.railway.app/api/games/game-boy-advance`);
 
     const games = await res.json();
 

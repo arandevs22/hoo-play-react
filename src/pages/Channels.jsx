@@ -58,7 +58,7 @@ export const Channels = () => {
 
 
 export const loaderChannels = async () => {
-    const res = await fetch(`https://api-retro-game.azurewebsites.net/api/channels`);
+    const res = await fetch(`https://befitting-jail-production.up.railway.app/api/channels`);
 
     const channels = await res.json();
 
