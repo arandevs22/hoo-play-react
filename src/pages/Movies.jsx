@@ -31,7 +31,7 @@ export const Movies = () => {
                 <Grid mb={3} container spacing={1}>
                     <ThemeProvider theme={darkTheme}>
                         {movies.items.slice(0, visible).map((movie) => (
-                            <Grid item xs={6} key={movie.id}>
+                            <Grid item xs={4} key={movie.id}>
                                 <Item elevation={3}>
                                     <Link to={`/peliculas/id/${movie.id}`}>
                                         <img className="cover" src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
