@@ -68,7 +68,7 @@ export const MoviesDocumental = () => {
 }
 
 export const loaderMoviesDocumental = async () => {
-    const res = await fetch(`https://api.themoviedb.org/3/list/8243388?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
+    const res = await fetch(`https://api.themoviedb.org/3/list/8258891?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
 
     const moviesDocumental = await res.json();
 
