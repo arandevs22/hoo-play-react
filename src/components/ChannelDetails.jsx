@@ -59,7 +59,7 @@ export const ChannelDetails = () => {
 
 
 export const loaderChannelDetails = async ({ params }) => {
-    const res = await fetch(`https://befitting-jail-production.up.railway.app/api/channels/id/${params.id}`);
+    const res = await fetch(`https://api-retro-game-b8cce30f0948.herokuapp.com/api/channels/id/${params.id}`);
 
     const channel = await res.json();
 

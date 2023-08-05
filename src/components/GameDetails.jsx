@@ -66,7 +66,7 @@ export const GameDetails = () => {
 
 
 export const loaderGameDetails = async ({ params }) => {
-    const res = await fetch(`https://befitting-jail-production.up.railway.app/api/games/game-boy-advance/id/${params.id}`);
+    const res = await fetch(`https://api-retro-game-b8cce30f0948.herokuapp.com/api/games/game-boy-advance/id/${params.id}`);
 
     const game = await res.json();
 
