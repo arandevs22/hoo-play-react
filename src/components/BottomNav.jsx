@@ -32,21 +32,21 @@ export const BottomNav = () => {
                         icon={<HomeIcon />}
                         onClick={() => navigate('/')}
                     />
-                    <BottomNavigationAction
+                    {/* <BottomNavigationAction
                         label="Canales"
                         icon={<LiveTvIcon />}
                         onClick={() => navigate('/canales')}
-                    />
+                    /> */}
                     <BottomNavigationAction
                         label="Peliculas"
                         icon={<MovieIcon />}
                         onClick={() => navigate('/peliculas')}
                     />
-                    {/* <BottomNavigationAction
+                    <BottomNavigationAction
                         label="Series"
                         icon={<LiveTvIcon />}
                         onClick={() => navigate('/series')} 
-                    /> */}
+                    />
                     <BottomNavigationAction
                         label="Juegos"
                         icon={<SportsEsportsIcon />}
