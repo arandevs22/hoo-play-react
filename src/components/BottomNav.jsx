@@ -47,11 +47,11 @@ export const BottomNav = () => {
                         icon={<LiveTvIcon />}
                         onClick={() => navigate('/series')} 
                     />
-                    <BottomNavigationAction
+                    {/* <BottomNavigationAction
                         label="Juegos"
                         icon={<SportsEsportsIcon />}
                         onClick={() => navigate('/juegos')}
-                    />
+                    /> */}
                 </BottomNavigation>
             </Paper>
             <Offset />
