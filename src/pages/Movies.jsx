@@ -39,6 +39,10 @@ export const Movies = () => {
                                     <Typography mt={1} className="title-movie">
                                         {movie.title}
                                     </Typography>
+
+<Typography mt={0.5} className="overage">
+ {movie.release_date}
+</Typography>
                                     <Typography mt={0.5} className="overage">
                                         <Star className="details" /> {movie.vote_average}
                                     </Typography>
@@ -64,5 +68,5 @@ export const loaderMovies = async () => {
 
     const movies = await res.json();
 
-    return { movies }
+    return { movies } 
 }

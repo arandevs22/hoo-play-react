@@ -54,6 +54,9 @@ export const MoviesPeliculaDeTv = () => {
                                         {movie.title}
                                     </Typography>
                                     <Typography mt={0.5} className="overage">
+                                        {movie.release_date}
+                                    </Typography>
+                                    <Typography mt={0.5} className="overage">
                                         <Star className="details" /> {movie.vote_average}
                                     </Typography>
                                 </Item>
@@ -67,7 +70,7 @@ export const MoviesPeliculaDeTv = () => {
 }
 
 export const loaderMoviesPeliculaDeTv = async () => {
-    const res = await fetch(`https://api.themoviedb.org/3/list/8258891?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
+    const res = await fetch(`https://api.themoviedb.org/3/list/8273576?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
 
     const moviesPeliculaDeTv = await res.json();
 
