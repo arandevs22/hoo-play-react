@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import '../../styles/slider.css';
-import { Container, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
 
 export const SliderTerror = () => {
 
@@ -55,22 +57,21 @@ export const SliderTerror = () => {
 
     return (
         <>
-            <Container>
+            <Box margin={2}>
                 <Typography variant="h6" color={"#fff"}>
                     Peliculas de Terror
                 </Typography>
-            </Container>
-            <div data-uk-slider>
-                <ul className='uk-slider-items uk-child-width-1-3 uk-grid-small slide-cover' data-uk-grid>
-                    {terrorMovies.map((movie) => (
-                        <Link to={`/peliculas/id/${movie.id}`} key={movie.id}>
-                            <li>
-                                <img className="cover" src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
-                            </li>
-                        </Link>
-                    ))}
-                </ul>
-            </div>
+            </Box>
+            <Swiper
+               spaceBetween={20}
+               slidesPerView={3.3}
+            >
+                {terrorMovies.map((movie) => (
+                    <SwiperSlide key={movie.id}>
+                        <img className="cover" src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </>
     )
 }
