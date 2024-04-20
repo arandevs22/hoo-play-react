@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body3,
+    ...theme.typography.body2,
     textAlign: 'left',
     padding: '10px'
 }))
@@ -16,9 +16,11 @@ const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
 export const Movies = () => {
 
-    const [visible, setVisible] = useState(20);
+    const [visible, setVisible] = useState(10);
 
     const { movies } = useLoaderData();
+
+    console.log(movies)
 
     const loadMore = () => {
         setVisible(visible + 20)
@@ -36,20 +38,15 @@ export const Movies = () => {
                                     <Link to={`/peliculas/id/${movie.id}`}>
                                         <img className="cover" src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
                                     </Link>
-                                    <Typography mt={1} className="title-movie">
+                                    <Typography mt={1} className="title-movie" variant="subtitle1">
                                         {movie.title}
                                     </Typography>
-
-<Typography mt={0.5} className="overage">
- {movie.release_date}
-</Typography>
-                                    <Typography mt={0.5} className="overage">
-                                        <Star className="details" /> {movie.vote_average}
+                                    <Typography mt={0.5} className="overage" variant="subtitle2">
+                                        {new Date(movie.release_date).getFullYear()}
                                     </Typography>
                                 </Item>
                             </Grid>
                         ))}
-
                     </ThemeProvider>
                 </Grid>
                 <Box mb={3}>
@@ -64,9 +61,14 @@ export const Movies = () => {
 }
 
 export const loaderMovies = async () => {
-    const res = await fetch(`https://api.themoviedb.org/3/list/8273576?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
 
-    const movies = await res.json();
+    const res1 = await fetch(`https://api.themoviedb.org/3/list/8295721?api_key=dd4a4feaa11b7f7a239aa3310342f14f&language=en-US&page=1`);
+    const res2 = await fetch(`https://api.themoviedb.org/3/list/8295721?api_key=dd4a4feaa11b7f7a239aa3310342f14f&language=en-US&page=2`)
 
-    return { movies } 
+    const page1 = await res1.json();
+    const page2 = await res2.json();
+
+    const allMovies = page1.items.concat(page2.items)
+
+    return { movies: {items: allMovies} }
 }

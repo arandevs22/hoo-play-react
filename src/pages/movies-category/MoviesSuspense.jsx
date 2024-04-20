@@ -70,7 +70,7 @@ export const MoviesSuspense = () => {
 }
 
 export const loaderMoviesSuspense = async () => {
-    const res = await fetch(`https://api.themoviedb.org/3/list/8273576?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
+    const res = await fetch(`https://api.themoviedb.org/3/list/8295721?api_key=dd4a4feaa11b7f7a239aa3310342f14f&language=en-US`);
 
     const moviesSuspense = await res.json();
 

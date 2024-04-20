@@ -61,7 +61,7 @@ export const Series = () => {
 }
 
 export const loaderSeries = async () => {
-    const res = await fetch(`https://api.themoviedb.org/3/list/8243511?api_key=e9a6dda420749a57b0f4f34699998c5a&language=en-US`);
+    const res = await fetch(`https://api.themoviedb.org/3/list/8295732?api_key=dd4a4feaa11b7f7a239aa3310342f14f&language=en-US`);
 
     const series = await res.json();
 

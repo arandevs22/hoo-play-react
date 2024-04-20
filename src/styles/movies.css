@@ -8,6 +8,7 @@
 }
 
 .title-movie {
+    color: #fff !important;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -15,7 +16,7 @@
 
 .overage {
     font-size: 1.0rem;
-    color: rgba(255, 255, 255, 0.6)
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
 
